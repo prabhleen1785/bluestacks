@@ -1,0 +1,397 @@
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navWrapper {
+  width: calc(100% - 100px);
+  min-width: 200px;
+  border-bottom: 2px solid #f5f5f7;
+  padding: 10px;
+  padding-bottom: 0px;
+  background: white;
+  display: flex;
+}
+
+.navBarOptions {
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.navBarOptions:hover {
+  color: #8ead2f;
+  border-bottom: 3px solid #8ead2f;
+}
+
+.active {
+  color: #8ead2f;
+  border-bottom: 3px solid #8ead2f;
+}
+
+.languageSwitcher {
+  cursor: pointer;
+}
+
+.languageNameWrapper {
+  display: flex;
+}
+
+.languageName {
+  margin-left: 10px;
+}
+
+.languagePopup {
+  display: flex;
+  height: 50px;
+  width: 150px;
+  justify-content: space-between;
+  margin-top: 3vh;
+  position: absolute;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding: 20px;
+  border: 1px solid #d0c5c5;
+  box-shadow: 0px 1px 14px -7px #afa9a9;
+}
+
+.topNavWrapper {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  z-index: 100;
+  color: white;
+  position: fixed;
+  background-color: #202741;
+  width: calc(100% - 100px);
+}
+
+.titleText {
+  color: white;
+  font-weight: 500;
+}
+
+.mainBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  width: calc(100% - 60px);
+  justify-content: center;
+}
+
+.mainBlockTitle {
+  font-weight: 600;
+  font-size: 30px;
+  color: #202741;
+  margin-bottom: 20px;
+}
+
+.outer {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.outerComp {
+  height: 100%;
+  margin-top: 40px;
+  width: calc(100% - 100px);
+  min-width: 200px;
+  box-shadow: 1px 1px 14px -3px #9e9797;
+}
+
+.outerTable {
+  display: grid;
+  grid-auto-flow: row;
+  overflow: scroll;
+}
+
+.outerHeader {
+  height: 40px;
+  background: #f1f1f4;
+  display: grid;
+  grid-auto-columns: 1fr 2fr 2fr 3fr;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  z-index: 1;
+}
+
+.outerValue {
+  display: flex;
+  align-items: center;
+  color: #756f6f;
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.outerItem {
+  height: 70px;
+  display: grid;
+  grid-auto-columns: 1fr 2fr 2fr 3fr;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+}
+
+.outerItemWrapper:not(:last-child) .outerItem {
+  border-bottom: 1px solid #dcd3d3;
+}
+
+.outerItemValue {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0 0 20px;
+}
+
+.outerItemDate {
+  font-size: 13px;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.outerItemDateAgo {
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
+  font-weight: 200;
+  color: #827e7e;
+}
+
+.outerItemValue2 {
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+}
+
+.outerItemCampaignOuter {
+  margin-left: 6px;
+}
+
+.outerItemCampaignName {
+  font-size: 12px;
+  width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.outerItemCampaignCountry {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 200;
+  color: #827e7e;
+  margin-top: 4px;
+}
+
+.outerItemViewPricing {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #827e7e;
+  cursor: pointer;
+}
+
+.outerItemValue3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionsWrapper {
+  display: flex;
+}
+
+.action1 {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.actionName {
+  margin-left: 4px;
+  font-size: 12px;
+  align-self: center;
+  color: #827e7e;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popupinner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  width: calc(400px - 40px);
+  bottom: 25%;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popupupper {
+  display: flex;
+}
+
+.popupicon {
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  background-size: cover;
+}
+
+.popupheadingcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  justify-content: flex-end;
+}
+
+.popuppricingtext {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.popuppricingfirst {
+  font-size: 14px;
+  font-weight: 400;
+  color: #848080;
+}
+
+.popuppricingrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.popupbutton {
+  display: flex;
+  justify-content: center;
+}
+
+.popupclosebutton {
+  border: 2px solid black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.outerItemCampaignIcon {
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-size: cover;
+}
+
+.priceIcon {
+  height: 20px;
+}
+
+.outerItemViewIcon {
+  display: flex;
+}
+
+.fileIcon {
+  height: 20px;
+}
+
+.popupcountry {
+  color: #b3aeae;
+}
+
+@media screen and (max-width: 600px) {
+  .outerItem {
+    height: 50vh;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr 1fr 1fr 2fr;
+  }
+  .outerItemCampaignName {
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .outerTable {
+    height: 100%;
+    grid-auto-flow: column;
+  }
+  .outerComp {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .navBarOptions {
+    font-size: 12px;
+  }
+  .mainBlock {
+    width: 100%;
+  }
+  .popupinner {
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    width: auto;
+    bottom: 20%;
+  }
+  .outerHeader {
+    height: 50vh;
+    min-width: 100px;
+    position: absolute;
+    background: #ffffff;
+    grid-auto-rows: 1fr 1fr 1fr 2fr;
+    grid-auto-flow: row;
+    box-shadow: -18px 0px 12px -20px #9e9797;
+    border-right: 1px solid #eae3e3;
+    background: #403d3d;
+  }
+  .outerItemWrapper:not(:last-child) .outerItem {
+    border-bottom: none;
+  }
+  .actionsWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .outerItemWrapper:nth-child(2) {
+    padding-left: 100px;
+  }
+  .outerValue {
+    padding: 0 10px;
+    color: #e6dfdf;
+    font-size: 14px;
+  }
+  .action1 {
+    margin-right: 0px;
+    width: 150px;
+  }
+  .navWrapper {
+    width: calc(100% - 20px);
+  }
+}
