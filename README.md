@@ -8,6 +8,12 @@ To run this project, run the following commands after reaching the destination f
 
 2. ### `npm start`
 
+3. ### `cd server/`
+
+4. ### `npm install`
+
+5. ### `node index.js`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Random data is used to render some information about the options which is kept under data.js file.
